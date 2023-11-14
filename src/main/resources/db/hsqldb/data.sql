@@ -11,9 +11,9 @@ INSERT INTO alumnos(id,nombre,localidad,provincia,email,descripcion,password,aut
 
 
 -- PROFESORES=================================================================================================================================================================================================================================================================================================================================================================================================================
-INSERT INTO profesores(id,nombre,localidad,provincia,email,descripcion,password,authority,disponibilidad,modalidad_id) VALUES (1,'Carlos Checa Toro','Constantina','Sevilla','cctoro7@yopmail.com','Acelerando el aprendizaje','pr0f3s0r_a','profesor','Lunes a Jueves, por la tarde',1);
-INSERT INTO profesores(id,nombre,localidad,provincia,email,descripcion,password,authority,disponibilidad,modalidad_id) VALUES (2,'Rafael Nadal Paredes','Córdoba','Córdoba','rafnadpar@yopmail.com','Subiendo apuntes a la red','pr0f3s0r_b','profesor','Martes, Jueves y Viernes, de 15:00 a 20:00',2);
-INSERT INTO profesores(id,nombre,localidad,provincia,email,descripcion,password,authority,disponibilidad,modalidad_id) VALUES (3,'Rodolfo Fernández Contador','Huelva','Huelva','rudyf05@yopmail.com','Realizando docencia','pr0f3s0r_c','profesor','Miércoles y Sábado, por la mañana',3);
+INSERT INTO profesores(id,nombre,localidad,provincia,email,descripcion,password,authority,disponibilidad,modalidad_id) VALUES (1,'Carlos Checa Toro','Constantina','Sevilla','cctoro7@yopmail.com','Acelerando el aprendizaje','pr0F3s0r_a','profesor','Lunes a Jueves, por la tarde',1);
+INSERT INTO profesores(id,nombre,localidad,provincia,email,descripcion,password,authority,disponibilidad,modalidad_id) VALUES (2,'Rafael Nadal Paredes','Córdoba','Córdoba','rafnadpar@yopmail.com','Subiendo apuntes a la red','pr0F3s0r_b','profesor','Martes, Jueves y Viernes, de 15:00 a 20:00',2);
+INSERT INTO profesores(id,nombre,localidad,provincia,email,descripcion,password,authority,disponibilidad,modalidad_id) VALUES (3,'Rodolfo Fernández Contador','Huelva','Huelva','rudyf05@yopmail.com','Realizando docencia','pr0F3s0r_c','profesor','Miércoles y Sábado, por la mañana',3);
 
 INSERT INTO profesor_niveles(profesor_id,nivel_educativo_id) VALUES (1,2);
 INSERT INTO profesor_niveles(profesor_id,nivel_educativo_id) VALUES (2,3);
@@ -28,6 +28,10 @@ INSERT INTO profesor_ramas(profesor_id,rama_conocimiento_id) VALUES (2,5);
 INSERT INTO profesor_ramas(profesor_id,rama_conocimiento_id) VALUES (2,6);
 INSERT INTO profesor_ramas(profesor_id,rama_conocimiento_id) VALUES (3,3);
 INSERT INTO profesor_ramas(profesor_id,rama_conocimiento_id) VALUES (3,8);
+
+
+-- ADMINISTRADORES============================================================================================================================================================================================================================================================================================================================================================================================================
+INSERT INTO administradores(id,nombre,localidad,provincia,email,descripcion,password,authority) VALUES (1,'Administrador','Sevilla','Sevilla','adminCfM@yopmail.com','Administrador de la plataforma','4dM1n1str4ad0r_a','administrador');
 
 
 -- NIVELES EDUCATIVOS=========================================================================================================================================================================================================================================================================================================================================================================================================

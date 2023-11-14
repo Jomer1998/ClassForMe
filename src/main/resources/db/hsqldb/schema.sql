@@ -5,6 +5,7 @@ DROP TABLE profesores IF EXISTS;
 DROP TABLE niveles_educativos IF EXISTS;
 DROP TABLE modalidades_clase IF EXISTS;
 DROP TABLE ramas_conocimiento IF EXISTS;
+DROP TABLE administradores IF EXISTS;
 DROP TABLE clases IF EXISTS;
 DROP TABLE estados_solicitud IF EXISTS;
 
@@ -69,6 +70,18 @@ CREATE TABLE profesor_ramas (
 );
 ALTER TABLE profesor_ramas ADD CONSTRAINT fk_profesor_niveles_profesores FOREIGN KEY (profesor_id) REFERENCES profesores (id);
 ALTER TABLE profesor_ramas ADD CONSTRAINT fk_profesor_niveles_ramas_conocimiento FOREIGN KEY (rama_conocimiento_id) REFERENCES ramas_conocimiento (id);
+
+CREATE TABLE administradores (
+	id             INTEGER IDENTITY PRIMARY KEY,
+	nombre         VARCHAR(255),
+	foto           VARCHAR(255),
+	localidad      VARCHAR(80),
+	provincia      VARCHAR(80),
+	email          VARCHAR(255),
+	descripcion    VARCHAR(1020),
+	password       VARCHAR(255),
+	authority      VARCHAR(80)
+);
 
 CREATE TABLE clases (
 	id                      INTEGER IDENTITY PRIMARY KEY,
